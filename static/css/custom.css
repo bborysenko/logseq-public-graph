@@ -1,3 +1,27 @@
 .extensions__code .code-editor {
     margin-top: 6px;
 }
+
+.dark-theme, html[data-theme=dark],
+.light-theme, .white-theme, html[data-theme=light] {
+  --tag-yellow:    #b58900;
+  --tag-orange:    #cb4b16;
+  --tag-red:       #dc322f;
+  --tag-magenta:   #d33682;
+  --tag-violet:    #6c71c4;
+  --tag-blue:      #268bd2;
+  --tag-cyan:      #2aa198;
+  --tag-green:     #859900;
+}
+
+a.tag {
+  border: 1px solid var(--ls-head-text-color);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+a.tag[data-ref="til"] {
+    border-color: var(--tag-cyan);
+    background-color: var(--tag-cyan);;
+    color: #fff;  
+  }

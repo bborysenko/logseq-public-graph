@@ -1,6 +1,78 @@
+@import url('https://cdn.jsdelivr.net/gh/sansui233/logseq-bonofix-theme/custom.css');
+
+/*****************************************
+  Custom color for public & private graph
+*****************************************/
+.dark-theme, html[data-theme=dark] {
+  --public-graph-left-menu-button-background-color: rgba(82, 158, 114, 1);
+  --public-graph-left-menu-button-background-color-hover: rgba(82, 158, 114, 0.7);
+  --private-graph-left-menu-button-background-color: rgba(223, 84, 82, 1);
+  --private-graph-left-menu-button-background-color-hover: rgba(223, 84, 82, 0.7);
+}
+
+.light-theme, .white-theme, html[data-theme=light] {
+  --public-graph-left-menu-button-background-color: rgba(68, 131, 97, 1);
+  --public-graph-left-menu-button-background-color-hover: rgba(68, 131, 97, 0.7);
+  --private-graph-left-menu-button-background-color: rgba(212, 76, 71, 1);
+  --private-graph-left-menu-button-background-color-hover: rgba(212, 76, 71, 0.7);
+}
+
+:root {
+  --left-menu-button-background-color: var(--public-graph-left-menu-button-background-color);
+  --left-menu-button-background-color-hover: var(--public-graph-left-menu-button-background-color-hover);
+}
+
+a.cp__header-left-menu.button {
+  background-color: var(--left-menu-button-background-color);
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+a.cp__header-left-menu.button:hover {
+  background-color: var(--left-menu-button-background-color-hover);
+}
+
+/*****************************************
+  Tags
+*****************************************/
+
+a.tag[data-ref="til"] {
+  background-color: #16a34a;
+}
+
+a.tag[data-ref="til"]:hover {
+  background-color: #22c55e
+}
+
+a.tag[data-ref="article"] {
+  background-color: #9333ea;
+}
+
+a.tag[data-ref="article"]:hover {
+  background-color: #a855f7
+}
+
+/*****************************************
+  Block Reference
+*****************************************/
+
+.content .block-ref {
+  border-radius: 0px;
+  font-style: normal;
+  padding: 2px 6px;
+}
+
+/*****************************************
+  Code Mirror
+*****************************************/
+
+.extensions__code .CodeMirror {
+  padding: 6px 10px 6px 6px;
+}
+
 /* Override default theme collors */
 
-.dark-theme, html[data-theme=dark] {
+/* .dark-theme, html[data-theme=dark] {
   --ls-primary-background-color: rgb(25, 25, 25);
   --ls-secondary-background-color: rgb(32, 32, 32);
   --ls-tertiary-background-color: rgba(15, 15, 15, 0.8);
@@ -29,13 +101,13 @@
 
 .light-theme, .white-theme, html[data-theme=light] {
 
-}
+} */
 
 /*****************************************
   Code Mirror
 *****************************************/
 
-.dark-theme, html[data-theme=dark] {
+/* .dark-theme, html[data-theme=dark] {
   --ls-codeblock-background-color:rgba(255, 255, 255, 0.03);
   --ls-codeblock-background-color-gutters: rgba(255, 255, 255, 0.03);;
 }
@@ -80,49 +152,21 @@ html[data-theme=dark] .cm-s-solarized {
 
 .extensions__code .code-editor {
   margin-top: 0;
-}
+} */
 
-/* Custom color for public & private graph */
-:root {
-  --left-menu-button-background-color: var(--public-graph-left-menu-button-background-color);
-  --left-menu-button-background-color-hover: var(--public-graph-left-menu-button-background-color-hover);
-}
 
-.dark-theme, html[data-theme=dark] {
-  --public-graph-left-menu-button-background-color: rgba(82, 158, 114, 1);
-  --public-graph-left-menu-button-background-color-hover: rgba(82, 158, 114, 0.7);
-  --private-graph-left-menu-button-background-color: rgba(223, 84, 82, 1);
-  --private-graph-left-menu-button-background-color-hover: rgba(223, 84, 82, 0.7);
-}
-
-.light-theme, .white-theme, html[data-theme=light] {
-  --public-graph-left-menu-button-background-color: rgba(68, 131, 97, 1);
-  --public-graph-left-menu-button-background-color-hover: rgba(68, 131, 97, 0.7);
-  --private-graph-left-menu-button-background-color: rgba(212, 76, 71, 1);
-  --private-graph-left-menu-button-background-color-hover: rgba(212, 76, 71, 0.7);
-}
-
-a.cp__header-left-menu.button {
-  background-color: var(--left-menu-button-background-color);
-  color: #fff !important;
-  opacity: 1 !important;
-}
-
-a.cp__header-left-menu.button:hover {
-  background-color: var(--left-menu-button-background-color-hover);
-}
 
 /* Tags */
 
-a.tag {
+/* a.tag {
   border: 1px solid var(--ls-head-text-color);
   padding: 0 5px;
   border-radius: 3px;
-}
+} */
 
 /* Misc */
 
-.extensions__code .code-editor {
+/* .extensions__code .code-editor {
     margin-top: 6px;
 }
 
@@ -142,4 +186,4 @@ a.tag[data-ref="til"] {
     border-color: var(--tag-cyan);
     background-color: var(--tag-cyan);;
     color: #fff;  
-  }
+  } */

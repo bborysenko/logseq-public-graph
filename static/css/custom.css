@@ -1,3 +1,97 @@
+/* Override default theme collors */
+
+.dark-theme, html[data-theme=dark] {
+  --ls-primary-background-color: rgb(25, 25, 25);
+  --ls-secondary-background-color: rgb(32, 32, 32);
+  --ls-tertiary-background-color: rgba(15, 15, 15, 0.8);
+  --ls-quaternary-background-color: rgb(36, 42, 45);
+  
+  --ls-border-color: rgba(255, 255, 255, 0.094);
+  --ls-guideline-color: rgba(255, 255, 255, 0.81);
+  --ls-guideline-color: rgb(36, 42, 45);
+
+  --ls-primary-text-color: rgba(255, 255, 255, 0.81);
+  --ls-link-text-color: rgb(155, 155, 155);
+  --ls-link-text-hover-color: rgba(255, 255, 255, 0.81);
+  --ls-link-ref-text-color: #91def9;
+  --ls-block-bullet-border-color: rgba(255, 255, 255, 0.282);
+  --ls-block-bullet-color: rgba(255, 255, 255, 0.81);
+  --ls-block-highlight-color: rgb(36, 42, 45);
+
+  --ls-block-properties-background-color: rgb(36, 42, 45);
+  --ls-page-properties-background-color: rgb(36, 42, 45);
+
+  --ls-table-tr-even-background-color: rgb(36, 42, 45);
+
+  --ls-scrollbar-foreground-color: rgb(36, 42, 45);
+  --ls-scrollbar-background-color: rgba(30, 60, 67, 0.1);
+}
+
+.light-theme, .white-theme, html[data-theme=light] {
+
+}
+
+/*****************************************
+  Code Mirror
+*****************************************/
+
+.dark-theme, html[data-theme=dark] {
+  --ls-codeblock-background-color:rgba(255, 255, 255, 0.03);
+  --ls-codeblock-background-color-gutters: rgba(255, 255, 255, 0.03);;
+}
+
+.light-theme, .white-theme, html[data-theme=light] {
+  --ls-codeblock-background-color: rgb(247, 246, 243);
+  --ls-codeblock-background-color-gutters: rgb(237, 236, 233);
+}
+
+.cm-s-solarized,
+.cm-s-solarized.cm-s-light,
+.cm-s-solarized.cm-s-dark {
+  background-color: var(--ls-codeblock-background-color);
+  text-shadow: unset;
+}
+
+html[data-theme=light] .cm-s-solarized {
+  color: rgb(55, 53, 47);
+}
+
+html[data-theme=dark] .cm-s-solarized {
+  color: rgb(255, 255, 255);
+}
+
+.cm-s-solarized.CodeMirror,
+.cm-s-solarized.cm-s-light.CodeMirror,
+.cm-s-solarized.cm-s-dark.CodeMirror {
+  -moz-box-shadow: unset;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+}
+.cm-s-solarized .CodeMirror-gutters,
+.cm-s-solarized.cm-s-light .CodeMirror-gutters,
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
+  background-color: var(--ls-codeblock-background-color-gutters);
+}
+.cm-s-solarized .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber {
+  text-shadow: unset;
+}
+
+.extensions__code .code-editor {
+  margin-top: 0;
+}
+
+/* Tags */
+
+a.tag {
+  border: 1px solid var(--ls-head-text-color);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+/* Misc */
+
 .extensions__code .code-editor {
     margin-top: 6px;
 }
@@ -12,12 +106,6 @@
   --tag-blue:      #268bd2;
   --tag-cyan:      #2aa198;
   --tag-green:     #859900;
-}
-
-a.tag {
-  border: 1px solid var(--ls-head-text-color);
-  padding: 0 5px;
-  border-radius: 3px;
 }
 
 a.tag[data-ref="til"] {

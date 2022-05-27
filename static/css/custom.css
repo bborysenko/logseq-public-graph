@@ -82,6 +82,36 @@ html[data-theme=dark] .cm-s-solarized {
   margin-top: 0;
 }
 
+/* Custom color for public & private graph */
+:root {
+  --left-menu-button-background-color: var(--public-graph-left-menu-button-background-color);
+  --left-menu-button-background-color-hover: var(--public-graph-left-menu-button-background-color-hover);
+}
+
+.dark-theme, html[data-theme=dark] {
+  --public-graph-left-menu-button-background-color: rgba(82, 158, 114, 1);
+  --public-graph-left-menu-button-background-color-hover: rgba(82, 158, 114, 0.7);
+  --private-graph-left-menu-button-background-color: rgba(223, 84, 82, 1);
+  --private-graph-left-menu-button-background-color-hover: rgba(223, 84, 82, 0.7);
+}
+
+.light-theme, .white-theme, html[data-theme=light] {
+  --public-graph-left-menu-button-background-color: rgba(68, 131, 97, 1);
+  --public-graph-left-menu-button-background-color-hover: rgba(68, 131, 97, 0.7);
+  --private-graph-left-menu-button-background-color: rgba(212, 76, 71, 1);
+  --private-graph-left-menu-button-background-color-hover: rgba(212, 76, 71, 0.7);
+}
+
+a.cp__header-left-menu.button {
+  background-color: var(--left-menu-button-background-color);
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+a.cp__header-left-menu.button:hover {
+  background-color: var(--left-menu-button-background-color-hover);
+}
+
 /* Tags */
 
 a.tag {
